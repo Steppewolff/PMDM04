@@ -4,6 +4,7 @@ import 'package:qr_scan/screens/mapa_screen.dart';
 
 void main() => runApp(MyApp());
 
+//Prueba
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
