@@ -15,9 +15,8 @@ class ScanTiles extends StatelessWidget {
     //Este provider nos permitirá acceder a la lista de ScanModels para un tipo en concreto
     final scanListProvider = Provider.of<ScanListProvider>(context);
     final scans = scanListProvider.scans;
+
     //La clase devuelve el widget, que es lo que se mostrará en la pantalla
-///////////////////////////////////////////////////////////////////////////////////////
-////EN ESTA ZONA ESTA EL ERROR POR EL QUE, AUNQUE BORRA EL REGISTRO DE LA BDD LO VUELVE A PINTAR, AUNQUE SI SE CMABIA DE PANTALLA Y SE VUELVE, SE VE QUE HA DESAPARECIDO
     return ListView.builder(
       itemCount: scans.length,
       itemBuilder: (_, index) => Dismissible(

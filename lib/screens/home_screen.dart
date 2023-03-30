@@ -46,9 +46,6 @@ class _HomeScreenBody extends StatelessWidget {
     final scanListProvider =
         Provider.of<ScanListProvider>(context, listen: false);
 
-    //Creación de la BDD
-    ////////////////DBProvider.db.database;
-
     switch (currentIndex) {
       case 0:
         scanListProvider.carregaScanPerTipus('geo');

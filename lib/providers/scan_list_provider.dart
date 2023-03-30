@@ -6,12 +6,9 @@ import 'package:qr_scan/models/scan_model.dart';
 class ScanListProvider extends ChangeNotifier {
   //Esta lista contendrá todos los ScanModel de tipo mapa cuando se ejecute la pantalla de mapas de la app y todos los ScanModel de tipo direcciones cuando se ejecute la pantalla de direcciones
   List<ScanModel> scans = [];
-  //La variable tipusSeleccionat cambiará dependiendo de l tipo de ScanModel seleccionado
+  //La variable tipusSeleccionat cambiará dependiendo del tipo de ScanModel seleccionado
   String tipusSeleccionat = 'http';
 
-  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  /////En principio aqui está el error de por qué no guarda los maps en la lista de maps y por qué no pinta bien el nombre de direcciones ni de maps
-  /////Revisar clases scan_button.dart --> tener en cuenta también que yo he cmabiado ese nombre de clase respecto a lo que él usa
   Future<ScanModel> nouScan(String valor) async {
     final nouScan = ScanModel(valor: valor);
     //Se instancia la clase DBProvider y se le asigna a su atributo id el que devuelve el método al crearlo, que es el que le toca en la BDD
@@ -36,9 +33,6 @@ class ScanListProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  ///TODO:
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   //Se cargan los ScanModel de un tipo concreto: mapa o direccion
   carregaScanPerTipus(String tipus) async {
     final scans = await DBProvider.db.getScansByTipus(tipus);

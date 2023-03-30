@@ -7,10 +7,7 @@ import 'package:path/path.dart';
 import '../models/scan_model.dart';
 
 class DBProvider {
-  //Variable de tipo Database
-  ///Las variables que empiezan por _ son siempre variables estáticas
   static Database? _database;
-  //Atributo que inicializa siempre la instancia que se va a devolver, usando el constructor privado (DBProvider._())
   //Esta clase devuelve una instancia de la propia clase, siempre la misma, al inicializarse dentro de la misma clase usando un constructor privado
   static final DBProvider db = DBProvider._();
 

@@ -17,9 +17,6 @@ class ScanButton extends StatelessWidget {
         Icons.filter_center_focus,
       ),
       onPressed: () async {
-        print('Botó polsat!');
-//        String barcodeScanRes = 'https://paucasesnovescifp.cat/';
-//        String barcodeScanRes = "geo:39.7262492,2.9119929";
         const COLOR_CODE = '#3D8BEF';
         const CANCEL_BUTTON_TEXT = 'Cancelar';
         String barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
